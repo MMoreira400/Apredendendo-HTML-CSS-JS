@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>lista</h1>
+    <ul class = 'tree'>
+        <li>
+            <span wm-folder>Back-End</span>
+            <ul>
+                <li>Java</li>
+                <li>JavaScript NodeJs</li>
+                <li>Python</li>
+            </ul>
+        </li>
+        <li>
+            <span wm-folder>Front-End</span>
+            <ul>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>JS
+                    <ul>
+                        <li>React</li>
+                        <li>Value</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+  
+</body>
+</html>
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(e => {
+        e.onclick = function(e){
+            
+        }
+    
+    });
+</script>

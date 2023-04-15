@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo HTML e CSS</title>
+    <style>
+        .titulos{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            background-color: rgb(34, 194, 34);
+            text-shadow: 1px 2px black;
+        }
+        .Navegacao{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            text-shadow: beige;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <header id="titulo" class="titulos">
+        <h1>Página Para Aprendizagem</h1>
+    </header>
+    <nav class="Navegacao">
+        <a href="lista.html">Lista</a> |
+        <a href="form.html">Formulários</a> 
+    </nav>
+
+    <section id="content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+
+    <footer class="titulos">
+        <p>
+           Acabou por aqui 
+        </p>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.querySelectorAll('a').forEach(link =>{
+        
+        link.onclick = function(e){
+            e.preventDefault()
+
+            fetch(link.href)
+                .then( resp => resp.text() )
+                .then(html => content.innerHTML = html)
+        }
+
+    })
+</script>

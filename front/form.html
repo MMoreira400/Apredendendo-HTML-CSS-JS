@@ -1,0 +1,52 @@
+<style >
+    .formulario{
+        text-align: center; 
+        margin-inline: 25%;
+    }
+    .campoFormulario{
+        margin-bottom: 2px;
+        margin-top: 2px;
+        display: block;
+    }
+    textarea{
+        display: block;
+    }
+    input[type = radio]{
+        display: inline;
+        margin-bottom: 2px;
+    }
+</style>
+
+<div class="formulario">
+
+<div id="cabecalhoFormulario" style="background-color: lightgray;">
+    <h1>Formulário</h1>
+</div>
+
+<div id = "fornu" style="text-align: left ; margin-left: 15%; position: relative;">
+    <form method="POST">
+        <label for="emailAPI" >Email:</label>
+        <input class="campoFormulario" type="email" name="email" id="emailAPI">
+        <label for="nomeAPI">Nome:</label>
+        <input class="campoFormulario" type="text" name="nome" id="nomeAPI">
+        <label for="senhaAPI">Senha:</label>
+        <input class="campoFormulario" type="password" name="senha" id="senhaAPI">
+        <label for="bio">Biografia:</label>
+        <textarea class="campoFormulario" name="bio" id="bio" cols="30" rows="3"></textarea>
+        <div>
+            <label>Tipo:</label>
+            <input type="radio" name="tipo" value="admin"> Admin
+            <input type="radio" name="tipo" value="regular"> Regular
+            <input type="radio" name="tipo" value="professor"> Professor
+        </div>
+        <label>Estado:</label>
+        <select name="estado">
+            <option value="ac">Acre</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="sp">São Paulo</option>
+        </select>
+        <button formaction="http://localhost:8090/usuarios/registrarUsuario" >Enviar</button>
+    </form>
+</div>
+<div style="margin: 2px; background-color: lightgray;"></div>
+</div>
